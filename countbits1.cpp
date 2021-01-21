@@ -1,7 +1,8 @@
 class Solution {
 public:
     vector<int> countBits(int num) {
-        vector<int> dp(num+1);
+        vector<int> dp(num+1); //Q: if the <(num+1)> part is not included, this code will run into some memory issues with null pointer
+                                // I always thought the () after a vector is sort of an optional thing when we know the size of the vector beforehand, is it?
         dp[0] = 0;
         for(int i=1; i<=num;i++){
             //if i is a number of 2 power, num of bits = 1;
